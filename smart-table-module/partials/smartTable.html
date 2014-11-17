@@ -8,6 +8,9 @@
     </tr>
     </thead>
     <tbody>
+    <tr ng-show="!displayedCollection.length" class="smart-table-data-row">
+        <td class="smart-table-data-cell" colspan="{{columns.length}}">No active Result</td>
+    </tr>
     <tr ng-repeat="dataRow in displayedCollection" ng-class="{selected:dataRow.isSelected}"
         class="smart-table-data-row">
         <td ng-repeat="column in columns" class="smart-table-data-cell {{column.cellClass}}"></td>
